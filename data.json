@@ -60,11 +60,11 @@
       "product price": 2500
     },
     {
-      "id": "b978",
-      "product name": "Pent",
+      "product name": "Coat",
       "product type": "Cotton Type",
       "product color": "black",
-      "product price": 3000
+      "product price": 3000,
+      "id": "f251"
     }
   ]
 }
