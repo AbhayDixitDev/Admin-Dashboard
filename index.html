@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard">
+            <h1>Dashboard</h1>
+            <div class="stats">
+                <div class="stat">
+                    <h2>Users</h2>
+                    <p>100</p>
+                </div>
+                <div class="stat">
+                    <h2>Orders</h2>
+                    <p>50</p>
+                </div>
+                <div class="stat">
+                    <h2>Revenue</h2>
+                    <p>$1000</p>
+                </div>
+            </div>
+        </section>
+        <section class="charts">
+            <h1>Charts</h1>
+            <div class="chart">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
