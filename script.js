@@ -1,60 +1,65 @@
-// Get the canvas elements
-const lineChartCanvas = document.getElementById('lineChart');
-const barChartCanvas = document.getElementById('barChart');
+// script.js
+// Toggle sidebar
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebarToggle = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".sidebar");
 
-// Create the charts
-const lineChart = new Chart(lineChartCanvas, {
-    type: 'line',
-    data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-        datasets: [{
-            label: 'Users',
-            data: [10, 20, 30, 40, 50],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+    sidebarToggle.addEventListener("click", function() {
+        sidebar.classList.toggle("active");
+    });
 });
 
-const barChart = new Chart(barChartCanvas, {
-    type: 'bar',
-    data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-        datasets: [{
-            label: 'Orders',
-            data: [10, 20, 30, 40, 50],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+// Modal functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const modals = document.querySelectorAll(".modal");
+    const modalTriggers = document.querySelectorAll(".modal-trigger");
+    const closeModalBtns = document.querySelectorAll(".cancel-btn");
+
+    modalTriggers.forEach(function(trigger) {
+        trigger.addEventListener("click", function() {
+            const modalId = trigger.getAttribute("data-modal");
+            const modal = document.querySelector(`#${modalId}`);
+            modal.style.display = "flex";
+        });
+    });
+
+    closeModalBtns.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            const modal = btn.closest(".modal");
+            modal.style.display = "none";
+        });
+    });
 });
 
-// Add event listeners to the nav links
-document.querySelectorAll('nav a').forEach((link) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const sectionId = link.getAttribute('href');
-        const section = document.querySelector(sectionId);
-        section.scrollIntoView({ behavior: 'smooth' });
+// Add product functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const addProductForm = document.querySelector("#add-product-form");
+    const addProductBtn = document.querySelector("#add-product-btn");
+
+    addProductBtn.addEventListener("click", function() {
+        addProductForm.style.display = "block";
+    });
+
+    addProductForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const productName = document.querySelector("#product-name").value;
+        const productPrice = document.querySelector("#product-price").value;
+        const productStock = document.querySelector("#product-stock").value;
+
+        // Add product to table
+        const productTable = document.querySelector("#product-table");
+        const newRow = productTable.insertRow();
+        const productNameCell = newRow.insertCell();
+        const productPriceCell = newRow.insertCell();
+        const productStockCell = newRow.insertCell();
+
+        productNameCell.textContent = productName;
+        productPriceCell.textContent = productPrice;
+        productStockCell.textContent = productStock;
+
+        // Clear form fields
+        document.querySelector("#product-name").value = "";
+        document.querySelector("#product-price").value = "";
+        document.querySelector("#product-stock").value = "";
     });
 });

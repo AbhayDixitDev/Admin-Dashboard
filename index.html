@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,44 +8,182 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Dashboard</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <button class="menu-btn" id="menu-btn">Menu</button>
+            <div class="user-profile">
+                <img src="user-image.jpg" alt="User Image" class="user-image">
+                <span class="user-name">John Doe</span>
+            </div>
+            <div class="auth-btns">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
+        </div>
     </header>
-    <main>
-        <section class="dashboard">
-            <h1>Dashboard</h1>
-            <div class="stats">
-                <div class="stat">
-                    <h2>Users</h2>
-                    <p>100</p>
+
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <ul class="menu-list">
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Dashboard Overview -->
+        <section class="dashboard-overview">
+            <h2>Dashboard Overview</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>Total Sales</h3>
+                    <p>$10,000</p>
                 </div>
-                <div class="stat">
-                    <h2>Orders</h2>
+                <div class="metric">
+                    <h3>New Orders</h3>
                     <p>50</p>
                 </div>
-                <div class="stat">
-                    <h2>Revenue</h2>
-                    <p>$1000</p>
+                <div class="metric">
+                    <h3>Active Users</h3>
+                    <p>100</p>
                 </div>
             </div>
         </section>
-        <section class="charts">
-            <h1>Charts</h1>
-            <div class="chart">
-                <canvas id="lineChart"></canvas>
-            </div>
-            <div class="chart">
-                <canvas id="barChart"></canvas>
+
+        <!-- Product Management -->
+        <section class="product-management">
+            <h2>Product Management</h2>
+            <button class="add-product-btn">Add Product</button>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>$10.00</td>
+                        <td>10</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more product rows here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sales Analytics -->
+        <section class="sales-analytics">
+            <h2>Sales Analytics</h2>
+            <div class="chart-container">
+                <!-- Add chart or graph here -->
             </div>
         </section>
+
+        <!-- Order Management -->
+        <section class="order-management">
+            <h2>Order Management</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Order Date</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Order 1</td>
+                        <td>John Doe</td>
+                        <td>2022-01-01</td>
+                        <td>$100.00</td>
+                        <td>Pending</td>
+                    </tr>
+                    <!-- Add more order rows here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- User Management -->
+        <section class="user-management">
+            <h2>User Management</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>Admin</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <!-- Modals and Forms -->
+    <div class="modal-container">
+        <!-- Add product modal -->
+        <div class="modal" id="add-product-modal">
+            <h2>Add Product</h2>
+            <form>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name">
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price" name="product-price">
+                <label for="product-stock">Product Stock:</label>
+                <input type="number" id="product-stock" name="product-stock">
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Edit product modal -->
+        <div class="modal" id="edit-product-modal">
+            <h2>Edit Product</h2>
+            <form>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name">
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price" name="product-price">
+                <label for="product-stock">Product Stock:</label>
+                <input type="number" id="product-stock" name="product-stock">
+                <button type="submit">Update Product</button>
+            </form>
+        </div>
+
+        <!-- Delete product modal -->
+        <div class="modal" id="delete-product-modal">
+            <h2>Delete Product</h2>
+            <p>Are you sure you want to delete this product?</p>
+            <button type="submit">Delete</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
