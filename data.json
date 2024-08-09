@@ -1,5 +1,22 @@
 {
-  "Product":[
-    
+  "Product": [
+    {
+      "id": "7a34",
+      "product_name": "Shoes",
+      "product_price": "",
+      "product_image": "hgjhg",
+      "product_brand": "Nike",
+      "product_review": "Great",
+      "product_rating": "5"
+    },
+    {
+      "id": "122b",
+      "product_name": "Shoes",
+      "product_price": "1000",
+      "product_image": "Shoes",
+      "product_brand": "Nike",
+      "product_review": "Excellent",
+      "product_rating": "5"
+    }
   ]
 }
