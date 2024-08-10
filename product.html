@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Registration Form</title>
     <style>
-        /* Global Styles */
+    
         body {
             font-family: Arial, sans-serif;
-            background-color: #3498db; /* blue background color */
+            background-color: #3498db;
         }
-        
-        /* Form Styles */
+       
         form {
             max-width: 400px;
             margin: 40px auto;
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 20px; /* changed border radius to 20px for a more rounded shape */
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            display: none; /* hide form by default */
+            display: none; 
+            position: absolute;
+            top: 5%;
+            margin-left: 40%;
+            margin-right: 30%;
         }
         
         form.show {
@@ -28,12 +31,12 @@
         }
         
         input[type="text"] {
-            width: 100%;
+            width: 90%;
             height: 40px;
             margin-bottom: 20px;
             padding: 10px;
             border: 1px solid #aaa;
-            border-radius: 10px; /* changed border radius to 10px for a more rounded shape */
+            border-radius: 10px;
             background-color: #f7f7f7;
         }
         
@@ -43,16 +46,17 @@
         }
         
         button[type="button"] {
-            background-color: #66d9ef;
+            background-color: #ee0000;
             color: #fff;
             padding: 10px 20px;
             border: none;
-            border-radius: 10px; /* changed border radius to 10px for a more rounded shape */
+            border-radius: 10px; 
             cursor: pointer;
+            width: 98%;
         }
         
         button[type="button"]:hover {
-            background-color: #34c759;
+            background-color: #00ccf5;
         }
         
         /* Button to show/hide form */
@@ -61,7 +65,7 @@
             color: #fff;
             padding: 10px 20px;
             border: none;
-            border-radius: 10px; /* changed border radius to 10px for a more rounded shape */
+            border-radius: 10px; 
             cursor: pointer;
         }
         
