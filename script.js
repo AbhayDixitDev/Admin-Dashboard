@@ -1,65 +1,28 @@
-// script.js
-// Toggle sidebar
-document.addEventListener("DOMContentLoaded", function() {
-    const sidebarToggle = document.querySelector(".menu-btn");
-    const sidebar = document.querySelector(".sidebar");
+let menuicn = document.querySelector(".menuicn");
+let nav = document.querySelector(".navcontainer");
 
-    sidebarToggle.addEventListener("click", function() {
-        sidebar.classList.toggle("active");
-    });
+menuicn.addEventListener("click", () => {
+    nav.classList.toggle("navclose");
 });
 
-// Modal functionality
-document.addEventListener("DOMContentLoaded", function() {
-    const modals = document.querySelectorAll(".modal");
-    const modalTriggers = document.querySelectorAll(".modal-trigger");
-    const closeModalBtns = document.querySelectorAll(".cancel-btn");
+(async function(){
+    let url = 'http://localhost:4000/Product';
+    let data =await fetch(url);
+    let response =await data.json();
 
-    modalTriggers.forEach(function(trigger) {
-        trigger.addEventListener("click", function() {
-            const modalId = trigger.getAttribute("data-modal");
-            const modal = document.querySelector(`#${modalId}`);
-            modal.style.display = "flex";
-        });
-    });
+    console.log(response);
+    document.querySelector('.report-body').innerHTML = response.map(e=>`
+         <div class="items">
+                        <div class="item1">
+                            <h3  class="t-op-nextlvl1">${e.product_name}</h3>
+                            <h3 class="t-op-nextlvl">${e.product_price}</h3>
+                            <img width="50px" src="${e.product_image}" alt="Product Image">
+                            <h3 class="t-op-nextlvl">${e.product_brand}</h3>
+                            <h3 class="t-op-nextlvl">${e.product_review}</h3>
+                            <h3 class="t-op-nextlvl">${e.product_rating}</h3>
+                        </div>           
+                    </div>
+         `).join(" ");
 
-    closeModalBtns.forEach(function(btn) {
-        btn.addEventListener("click", function() {
-            const modal = btn.closest(".modal");
-            modal.style.display = "none";
-        });
-    });
-});
+})();
 
-// Add product functionality
-document.addEventListener("DOMContentLoaded", function() {
-    const addProductForm = document.querySelector("#add-product-form");
-    const addProductBtn = document.querySelector("#add-product-btn");
-
-    addProductBtn.addEventListener("click", function() {
-        addProductForm.style.display = "block";
-    });
-
-    addProductForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const productName = document.querySelector("#product-name").value;
-        const productPrice = document.querySelector("#product-price").value;
-        const productStock = document.querySelector("#product-stock").value;
-
-        // Add product to table
-        const productTable = document.querySelector("#product-table");
-        const newRow = productTable.insertRow();
-        const productNameCell = newRow.insertCell();
-        const productPriceCell = newRow.insertCell();
-        const productStockCell = newRow.insertCell();
-
-        productNameCell.textContent = productName;
-        productPriceCell.textContent = productPrice;
-        productStockCell.textContent = productStock;
-
-        // Clear form fields
-        document.querySelector("#product-name").value = "";
-        document.querySelector("#product-price").value = "";
-        document.querySelector("#product-stock").value = "";
-    });
-});
