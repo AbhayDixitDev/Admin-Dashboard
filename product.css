@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none; 
+    position: absolute;
+    margin-left: 40%;
+    margin-right: 30%;
+    z-index: 10;
+}
+
+form.show {
+    display: block;
+}
+
+input[type="text"] {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+input[type="text"]:focus {
+    border-color: #66d9ef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="button"] {
+    background-color: #00ff2f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    width: 98%;
+}
+
+button[type="button"]:hover {
+    background-color: #186d07;
+}
+
+/* Button to show/hide form */
+.show-form-btn {
+    background-color: #66d9ef;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+.show-form-btn:hover {
+    background-color: #34c759;
+}
+
+
+/* ===========table data product====== */
+
+#showproductdata tr {
+    height: 50px;
+    overflow-y: scroll;
+}
+
+/*----------------------------close btn for form--------------*/
+
+#close{
+display: none;
+margin-top: 10px;
+background-color: red;
+}
+
+#close:hover {
+    background-color: #a12828;
+}

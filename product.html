@@ -4,79 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Registration Form</title>
-    <style>
-    
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #3498db;
-        }
-       
-        form {
-            max-width: 400px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            display: none; 
-            position: absolute;
-            top: 5%;
-            margin-left: 40%;
-            margin-right: 30%;
-        }
-        
-        form.show {
-            display: block;
-        }
-        
-        input[type="text"] {
-            width: 90%;
-            height: 40px;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #aaa;
-            border-radius: 10px;
-            background-color: #f7f7f7;
-        }
-        
-        input[type="text"]:focus {
-            border-color: #66d9ef;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        button[type="button"] {
-            background-color: #ee0000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px; 
-            cursor: pointer;
-            width: 98%;
-        }
-        
-        button[type="button"]:hover {
-            background-color: #00ccf5;
-        }
-        
-        /* Button to show/hide form */
-        .show-form-btn {
-            background-color: #66d9ef;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px; 
-            cursor: pointer;
-        }
-        
-        .show-form-btn:hover {
-            background-color: #34c759;
-        }
-    </style>
+    <link rel="stylesheet" href="./product.css">
 </head>
 <body>
-    <button class="show-form-btn" onclick="document.querySelector('form').classList.toggle('show')">Registration Form</button>
-    <form>
+    
+    <form id="product_form">
         <h2>Product Registration Form</h2>
         <input type="text" placeholder="Product Name" id="pname"> <br>
         <input type="text" placeholder="Price" id="pprice"><br>
@@ -85,8 +17,17 @@
         <input type="text" placeholder="Review" id="preview"><br>
         <input type="text" placeholder="Rating" id="prating"><br>
         <button type="button" onclick="return run()">Submit</button>
+        <Button type="button" id="close" onclick="Close()">Close</Button>
     </form>
-
+     <!-- ===================================== -->
+    <section id="website">
+       
+    
+        <button onclick="show_form()"> + Add Product </button>
+        
+        <table width="80%" border="2px" align="center" cellpadding="10px" cellspacing="10px" id="showproductdata"></table>
+    
+        </section>
     <script src="./product.js"></script>
     
 </body>
