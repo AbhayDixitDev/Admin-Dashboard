@@ -84,3 +84,18 @@ background-color: red;
 #close:hover {
     background-color: #a12828;
 }
+.fa-solid{
+    color:black;
+    
+}
+
+.fa-trash:hover{
+    color:red;
+    
+}
+.fa-pen{
+    color: black;
+}
+.fa-pen:hover{
+    color: greenyellow;
+}

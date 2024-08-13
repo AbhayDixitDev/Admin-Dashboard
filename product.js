@@ -1,3 +1,4 @@
+
 const run = ()=>{
 let pname=document.querySelector('#pname').value;
 let pprice=document.querySelector('#pprice').value;
@@ -65,8 +66,26 @@ const Close = ()=>{
          <td>${e.product_brand}</td>
          <td>${e.product_review}</td>
          <td>${e.product_rating}</td>
+         <td onclick="del('${e.id}')"><i class="fa-solid fa-trash"></i></td>
+         <td onclick="upd('${e.id}')"><i class="fa-solid fa-pen"></i></td>
          </tr>
          `).join(" ");
 
+         
+
 })();
 
+
+function del(arg){
+    let url=`http://localhost:4000/Product/${arg}`;
+    let method={
+        method:"DELETE"
+    }
+    fetch(url,method)
+
+    console.log(arg);
+
+}
+function upd(e){
+    console.log(e)
+}

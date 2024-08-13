@@ -80,15 +80,6 @@
       "product_brand": "Nike",
       "product_review": "Excellent",
       "product_rating": "4"
-    },
-    {
-      "id": "1d23",
-      "product_name": "Womens WMNS Court Royale 2 Nn Running Shoe",
-      "product_price": "2757",
-      "product_image": "https://m.media-amazon.com/images/I/61-CBQQAjmL._AC_UL480_FMwebp_QL65_.jpg",
-      "product_brand": "Nike",
-      "product_review": "In Budget",
-      "product_rating": "4"
     }
   ]
 }
