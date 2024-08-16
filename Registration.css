@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Light Gray */
+}
+
+/* Form Styles */
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px; /* Add padding to the form */
+    background-color: #fff; /* White */
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px); /* Adjust the width to account for padding */
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light Gray */
+    border-radius: 5px;
+}
+
+/* Input Field Focus Styles */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #aaa; /* Dark Gray */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px; /* Add margin between buttons */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Styles */
+button[type="submit"]:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Register Button Styles */
+button[type="submit"].register {
+    background-color: #2ECC40; /* Green */
+    color: #fff; /* White */
+}
+
+/* Register Button Hover Styles */
+button[type="submit"].register:hover {
+    animation: color-grid 3s infinite;
+    background-color: #1E8651; /* Dark Green */
+}
+
+/* Login Button Styles */
+button[type="submit"].login {
+    background-color: #FF3737; /* Red */
+    color: #fff; /* White */
+}
+
+/* Login Button Hover Styles */
+button[type="submit"].login:hover {
+    animation: color-grid-red 3s infinite;
+    background-color: #C0392B; /* Dark Red */
+}
+
+/* Animation Styles */
+@keyframes color-grid {
+    0% {
+        background-color: #2ECC40; /* Green */
+    }
+    50% {
+        background-color: #808080; /* Gray */
+    }
+    100% {
+        background-color: #2ECC40; /* Green */
+    }
+}
+
+@keyframes color-grid-red {
+    0% {
+        background-color: #00e60b; /* Green */
+    }
+    50% {
+        background-color: #808080; /* Gray */
+    }
+    100% {
+        background-color: #00e60b; /* Green */
+    }
+}

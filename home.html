@@ -12,8 +12,10 @@
     <script src="./product.js"></script>
    
     <link rel="stylesheet" 
-          href="styles.css">
+          href="home.css">
           <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -26,8 +28,9 @@
         <input type="text" placeholder="Brand" id="pbrand"><br>
         <input type="text" placeholder="Review" id="preview"><br>
         <input type="text" placeholder="Rating" id="prating"><br>
-        <button type="button" onclick="return run()">Submit</button>
-        <Button type="button" id="close" onclick="Close()">Close</Button>
+        <button type="button" id="addbutton" onclick="return run()">Submit</button>
+        <button type="button" onclick="updateproduct()" id="updatebutton">Update Product</button>
+        <button type="button" id="close" onclick="Close()">Close</button>
     </form>
   <section id="website">
     
@@ -127,7 +130,7 @@
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
                             class="nav-img" 
                             alt="logout">
-                        <h3>Logout</h3>
+                        <h3 onclick="loginredirect()">Login</h3>
                     </div>
 
                 </div>
@@ -206,6 +209,8 @@
                     <h3 class="t-op-nextlvl">Product Brand</h3>
                     <h3 class="t-op-nextlvl">Product Review</h3>
                     <h3 class="t-op-nextlvl">Product Rating</h3>
+                    <h3 class="t-op-nextlvl">Delete Product</h3>
+                    <h3 class="t-op-nextlvl">Update Product</h3>                    
                 </div>
                 <div class="report-body">
                     
@@ -217,6 +222,12 @@
     </div>
   </section>
 
-    <script src="./script.js"></script>
+    <script src="./home.js"></script>
+    <script>
+        let logininfo = window.localStorage.getItem('logininfo');
+        let loginingfo1 = JSON.parse(logininfo);
+        let select = document.querySelector('.dpicn');
+        select.src =loginingfo1.img; 
+    </script>
 </body>
 </html>

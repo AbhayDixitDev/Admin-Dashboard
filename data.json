@@ -1,15 +1,6 @@
 {
   "Product": [
     {
-      "product_name": "Mens Quest 5 Running Shoe",
-      "product_price": "3462",
-      "product_image": "https://m.media-amazon.com/images/I/71atP1wteYL._AC_UL480_FMwebp_QL65_.jpg",
-      "product_brand": "Nike1",
-      "product_review": "Excellent",
-      "product_rating": "4",
-      "id": "ff6b"
-    },
-    {
       "id": "2756",
       "product_name": "Mens Air Winflo 9 Running Shoes 3.9 out of 5 stars",
       "product_price": "5995",
@@ -80,6 +71,18 @@
       "product_brand": "Nike",
       "product_review": "Excellent",
       "product_rating": "4"
+    }
+  ],
+  "Registration": [
+    {},
+    {
+      "id": "2310",
+      "name": "Abhay Dixit",
+      "email": "Shivamdixit1st@gmail.com",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn5PuLC91pyT6UWWiddPJYp1fMKeKTxUS4A&s",
+      "mobile": "7017709865",
+      "password": "1234",
+      "cpassword": "1234"
     }
   ]
 }

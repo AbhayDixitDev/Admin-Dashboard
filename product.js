@@ -1,5 +1,8 @@
 
+
+
 const run = ()=>{
+
 let pname=document.querySelector('#pname').value;
 let pprice=document.querySelector('#pprice').value;
 let pimage=document.querySelector('#pimage').value;
@@ -33,12 +36,24 @@ return false;
 }
 
 const show_form = ()=>{
+    document.querySelector('#pname').value="";
+document.querySelector('#pprice').value="";
+document.querySelector('#pimage').value="";
+document.querySelector('#pbrand').value="";
+document.querySelector('#preview').value="";
+document.querySelector('#prating').value="";
     let select = document.querySelector('#product_form');
     select.style.display = "block";
-    let closebtn = document.querySelector('#close');
-    closebtn.style.display="block";
-    let selectbg = document.querySelector('#website');
-    selectbg.style.filter = "blur(5px)"
+    select.style.marginTop="50px";
+
+    let selectbg = document.querySelector('#website');    
+    selectbg.style.filter = "blur(5px)";
+    let selectclose = document.querySelector('#close');
+     selectclose.style.display = "block";
+     let selectadd = document.querySelector('#addbutton');
+     selectadd.style.display = "block";
+     let selectupdate = document.querySelector('#updatebutton');
+     selectupdate.style.display = "none";
 }
 const Close = ()=>{
     let select = document.querySelector('#product_form');
@@ -95,13 +110,18 @@ let storeid = null;
      let response = await data.json();
      console.log(response)
       
-     let selectadd = document.querySelector('#close');
+     let selectclose = document.querySelector('#close');
+     selectclose.style.display = "block";
+     let selectadd = document.querySelector('#addbutton');
      selectadd.style.display = "none";
      let selectupdate = document.querySelector('#updatebutton');
      selectupdate.style.display = "block";
+     let selectbg = document.querySelector('#website');    
+    selectbg.style.filter = "blur(5px)";
 
 
      let select = document.querySelector('#product_form');
+     select.style.marginTop="50px"
      select.style.display = "block";
      document.querySelector('#pname').value = response.product_name;
      document.querySelector('#pprice').value = response.product_price;
@@ -148,5 +168,11 @@ const updateproduct = ()=>{
      let selectbg = document.querySelector('#website');
      selectbg.style.filter = "none"
      return false;
+}
+
+
+
+function loginredirect(){
+    window.location.href = "login.html";
 }
 

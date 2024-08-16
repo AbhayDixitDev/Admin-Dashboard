@@ -20,9 +20,10 @@ menuicn.addEventListener("click", () => {
                             <h3 class="t-op-nextlvl">${e.product_brand}</h3>
                             <h3 class="t-op-nextlvl">${e.product_review}</h3>
                             <h3 class="t-op-nextlvl">${e.product_rating}</h3>
+                            <h3 class="t-op-nextlvl" onclick="del('${e.id}')"><i class="fa-solid fa-trash"></i></h3>
+                            <h3 class="t-op-nextlvl" onclick="upd('${e.id}')"> <i class="fa-solid fa-pen"></i></h3>
                         </div>           
                     </div>
          `).join(" ");
 
 })();
-
