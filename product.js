@@ -67,7 +67,7 @@ const Close = ()=>{
          <td>${e.product_review}</td>
          <td>${e.product_rating}</td>
          <td onclick="del('${e.id}')"><i class="fa-solid fa-trash"></i></td>
-         <td onclick="upd('${e.id}')"><i class="fa-solid fa-pen"></i></td>
+         <td onclick="upd('${e.id}')"> <i class="fa-solid fa-pen"></i></td>
          </tr>
          `).join(" ");
 
@@ -86,6 +86,67 @@ function del(arg){
     console.log(arg);
 
 }
-function upd(e){
-    console.log(e)
+let storeid = null;
+ async function upd(arg){
+   
+     storeid = arg;
+
+     let data = await fetch(`http://localhost:4000/Product/${arg}`);
+     let response = await data.json();
+     console.log(response)
+      
+     let selectadd = document.querySelector('#close');
+     selectadd.style.display = "none";
+     let selectupdate = document.querySelector('#updatebutton');
+     selectupdate.style.display = "block";
+
+
+     let select = document.querySelector('#product_form');
+     select.style.display = "block";
+     document.querySelector('#pname').value = response.product_name;
+     document.querySelector('#pprice').value = response.product_price;
+     document.querySelector('#pimage').value = response.product_image;
+     document.querySelector('#pbrand').value = response.product_brand;
+     document.querySelector('#preview').value = response.product_review;
+     document.querySelector('#prating').value = response.product_rating;
+
 }
+
+
+
+
+const updateproduct = ()=>{
+     let product_name = document.querySelector('#pname').value;
+     let product_price = document.querySelector('#pprice').value;
+     let product_image = document.querySelector('#pimage').value;
+     let product_brand = document.querySelector('#pbrand').value;
+     let product_review = document.querySelector('#preview').value;
+     let product_rating = document.querySelector('#prating').value;
+
+     
+
+     let product = {
+      "product_name":product_name,
+      "product_price":product_price,
+      "product_image":product_image,
+      "product_brand":product_brand,
+      "product_review":product_review,
+      "product_rating":product_rating
+   }
+
+     console.log(product);
+
+     let url = `http://localhost:4000/Product/${storeid}`;
+     let method = {
+          method:"PUT",
+          header:{
+               "content-type":"application/json"
+          },
+          body:JSON.stringify(product)
+     }
+     fetch(url,method);
+     let selectbg = document.querySelector('#website');
+     selectbg.style.filter = "none"
+     return false;
+}
+

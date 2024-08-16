@@ -84,6 +84,15 @@ background-color: red;
 #close:hover {
     background-color: #a12828;
 }
+
+#updatebutton{
+    display: none;
+    margin-top: 10px;
+    background-color: green;  
+}
+#updatebutton:hover{
+ background-color: red;
+}
 .fa-solid{
     color:black;
     
@@ -98,4 +107,9 @@ background-color: red;
 }
 .fa-pen:hover{
     color: greenyellow;
+}
+
+
+#updatebutton{
+    display: none;
 }
