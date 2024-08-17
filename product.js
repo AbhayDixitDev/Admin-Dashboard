@@ -173,6 +173,6 @@ const updateproduct = ()=>{
 
 
 function loginredirect(){
-    window.location.href = "login.html";
+    document.location.href = "login.html";
 }
 

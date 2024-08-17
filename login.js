@@ -11,7 +11,7 @@ const login = async()=>{
     if(finddata){
         // window.alert("user exist");
         window.localStorage.setItem('logininfo',JSON.stringify(finddata))
-        window.location.href = "home.html";
+        document.location.href = "home.html";
     }
       else{
         var choice = confirm("Your credentials are incorrect. Click 'OK' to retry or 'Cancel' to register yourself.");
@@ -19,7 +19,7 @@ const login = async()=>{
         if (choice) {
           // Do nothing, let the user retry
         } else {
-          window.location.href = "Registration.html";
+          document.location.href = "Registration.html";
         }
     }
 
@@ -27,7 +27,7 @@ const login = async()=>{
     return false;
 }
 function redirectRegister(){
-    window.location.href="Registration.html";
+    document.location.href="Registration.html";
 }
 
 
