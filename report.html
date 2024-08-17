@@ -11,9 +11,10 @@
     <title>Admin Dashboard</title>
     <script src="./product.js"></script>
    
-    <link rel="stylesheet" 
-          href="home.css">
+    <link rel="stylesheet" href="home.css">
           <link rel="stylesheet" href="./product.css">
+          <link rel="stylesheet" href="./report.css">
+          <script src="./home.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -38,7 +39,7 @@
     <header>
 
         <div class="logosec">
-            <div class="logo">Login Dashboard</div>
+            <div class="logo" onclick="home()">Login Dashboard</div>
             <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                 class="icn menuicn" 
@@ -77,7 +78,7 @@
         <div class="navcontainer">
             <nav class="nav">
                 <div class="nav-upper-options">
-                    <div class="nav-option option1">
+                    <div class="nav-option option1" onclick="home()">
                         <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
                             class="nav-img" 
@@ -93,7 +94,7 @@
                         <h3> Articles</h3>
                     </div>
 
-                    <div class="nav-option option3" onclick="report()">
+                    <div class="nav-option option3">
                         <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
                             class="nav-img" 
@@ -136,7 +137,7 @@
                 </div>
             </nav>
         </div>
-        <div class="main" >
+        <div class="main">
 
             <div class="searchbar2">
                 <input type="text" 
@@ -197,12 +198,32 @@
                 </div>
             </div>
 
+            <div class="report-container">
+                <div class="report-header">
+                    <h1 class="recent-Articles">Recent Products</h1>
+                    <button class="view" onclick="show_form()">Add</button>
+                </div>
+                <div class="item1" style="margin-left: 20px;">
+                    <h3 class="t-op-nextlvl1">Product Name</h3>
+                    <h3 class="t-op-nextlvl">Product Price</h3>
+                    <h3 class="t-op-nextlvl">Product Image</h3>
+                    <h3 class="t-op-nextlvl">Product Brand</h3>
+                    <h3 class="t-op-nextlvl">Product Review</h3>
+                    <h3 class="t-op-nextlvl">Product Rating</h3>
+                    <h3 class="t-op-nextlvl">Delete Product</h3>
+                    <h3 class="t-op-nextlvl">Update Product</h3>                    
+                </div>
+                <div class="report-body">
+                    
             
+                    
+                </div>
+            </div>
         </div>
     </div>
   </section>
 
-    <script src="./home.js"></script>
+    <script src="./report.js"></script>
     <script>
         let logininfo = window.localStorage.getItem('logininfo');
         let loginingfo1 = JSON.parse(logininfo);

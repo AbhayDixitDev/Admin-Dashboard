@@ -1,0 +1,87 @@
+
+
+
+.report-container {
+    min-height: 300px;
+    max-width: 1200px;
+    margin: 70px auto 0px auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+  }
+  .report-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+  }
+  
+  .recent-Articles {
+    font-size: 30px;
+    font-weight: 600;
+    color: #5500cb;
+  }
+  
+  .view {
+    height: 35px;
+    width: 90px;
+    border-radius: 8px;
+    background-color: #5500cb;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .report-body {
+    max-width: 1160px;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  .report-topic-heading,
+  .item1 {
+    width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .t-op {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  
+  .items {
+    width: 1120px;
+    margin-top: 15px;
+    display: inline;
+  }
+  
+  .item1 {
+    margin-top: 20px;
+  }
+  
+  
+  .t-op-nextlvl {
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    width: 70px;
+  }
+  .t-op-nextlvl1 {
+      font-size: 14px;
+      letter-spacing: 0px;
+      font-weight: 600;
+      width:300px;
+    }
+  
+  .label-tag {
+    width: 100px;
+    text-align: center;
+    background-color: rgb(0, 177, 0);
+    color: white;
+    border-radius: 4px;
+  }
