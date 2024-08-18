@@ -1,10 +1,12 @@
-(async function(){
-    let url = 'http://localhost:4000/Product';
-    let data =await fetch(url);
-    let response =await data.json();
+(async function () {
+  let url = "http://localhost:4000/Product";
+  let data = await fetch(url);
+  let response = await data.json();
 
-    console.log(response);
-    document.querySelector('.report-body').innerHTML = response.map(e=>`
+  console.log(response);
+  document.querySelector(".report-body").innerHTML = response
+    .map(
+      (e) => `
          <div class="items">
                         <div class="item1">
                             <h3  class="t-op-nextlvl1">${e.product_name}</h3>
@@ -17,6 +19,7 @@
                             <h3 class="t-op-nextlvl" onclick="upd('${e.id}')"> <i class="fa-solid fa-pen"></i></h3>
                         </div>           
                     </div>
-         `).join(" ");
-
+         `
+    )
+    .join(" ");
 })();
