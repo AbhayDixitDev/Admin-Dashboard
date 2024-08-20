@@ -11,3 +11,6 @@ function home() {
 function report() {
   document.location.href = "report.html";
 }
+function profileopen(){
+  document.location.href = "profile.html";
+}

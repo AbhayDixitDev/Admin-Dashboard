@@ -13,14 +13,14 @@
 
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="./home.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -44,7 +44,7 @@
       <!-- for header part -->
       <header>
         <div class="logosec">
-          <div class="logo">Login Dashboard</div>
+          <div class="logo" onclick="home()">Login Dashboard</div>
           <img
             src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
             class="icn menuicn"
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <div class="message">
+        <div class="message" onclick="profileopen()">
           <div class="circle"></div>
           <img
             src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
@@ -85,7 +85,7 @@
         <div class="navcontainer">
           <nav class="nav">
             <div class="nav-upper-options">
-              <div class="nav-option option1">
+              <div class="nav-option option1" onclick="home()">
                 <img
                   src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
                   class="nav-img"
@@ -162,16 +162,22 @@
             </div>
           </div>
 
-          <div class="box-container">
-            <div class="profile-box">
-              <img id="profile-photo" src="" alt="Profile Photo" />
-              <h2 id="name"></h2>
-              <p id="email"></p>
-              <p id="mobile"></p>
-              <p id="password"></p>
-              <p id="cpassword"></p>
-            </div>
+          
+          <!-- PROFILE CODE START-->
+         
+
+          <div class="card">
+            <img src="" id="profile-photo" alt="John" style="width:100%">
+            <h1 id="name"></h1>
+            <p  id="email"></p>
+            <a href="" id="github"><i class="fa fa-github"></i></a>
+            <a href="" id="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="" id="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="" id="facebook"><i class="fa fa-facebook"></i></a>
+            <p><button id="mobile"></button></p>
           </div>
+
+          <!-- PROFILE CODE END -->
         </div>
       </div>
     </section>
