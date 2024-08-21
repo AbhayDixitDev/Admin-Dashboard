@@ -87,7 +87,7 @@ button[type="submit"].login:hover {
   }
 }
 
-@keyframes color-grid-red {
+@keyframes color-grid-green {
   0% {
     background-color: #00e60b; /* Green */
   }
@@ -96,5 +96,17 @@ button[type="submit"].login:hover {
   }
   100% {
     background-color: #00e60b; /* Green */
+  }
+}
+
+@keyframes color-grid-red {
+  0% {
+    background-color: #e60400; /* Green */
+  }
+  50% {
+    background-color: #808080; /* Gray */
+  }
+  100% {
+    background-color: #e60400; /* Green */
   }
 }

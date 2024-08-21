@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
     <link rel="stylesheet" href="./Registration.css" />
+    <script src="./product.js"></script>
   </head>
   <body>
     <form action="">
@@ -19,8 +20,11 @@
       <input type="text" placeholder="Enter Facebook Profile URL" id="facebook">
       <input type="password" placeholder="Enter Password" id="password" required/>
       <input type="text" placeholder="Enter Confirm Password" id="cpassword" required/>
-      <button type="submit" class="login" onclick="registration()">
+      <button type="submit" class="register" onclick="registration()">
         Register
+      </button>
+      <button type="submit" class="login" onclick="loginredirect()">
+        Login
       </button>
     </form>
 
