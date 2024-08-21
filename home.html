@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="./root.css">
+    <script src="./root.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -22,7 +24,7 @@
     />
   </head>
 
-  <body>
+  <body onload="h()">
     <form id="product_form">
       <h2>Product Registration Form</h2>
       <input type="text" placeholder="Product Name" id="pname" /> <br />
@@ -61,6 +63,10 @@
               alt="search-icon"
             />
           </div>
+        </div>
+        <div>
+          <button onclick="dark()">dark</button>
+          <button onclick="light()">light</button>
         </div>
 
         <div class="message" onclick="profileopen()">
