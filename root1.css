@@ -1,0 +1,156 @@
+/* Dark Mode */
+.dark-mode {
+  /* Text */
+  h1, h2, h3, h4, h5, h6, p, a, span, li {
+    color: #fff;
+  }
+
+  /* Background */
+  body, html {
+    background-color: #333;
+  }
+
+  /* Borders */
+  table, th, td, input, textarea, select, button {
+    border-color: #444;
+  }
+
+  /* Links */
+  a:hover {
+    color: #ccc;
+  }
+
+  /* Headers and Footers */
+  header, footer {
+    background-color: #444;
+    color: #fff;
+  }
+
+  /* Navigation */
+  nav ul li a {
+    color: #fff;
+  }
+  nav ul li a:hover {
+    color: #ccc;
+  }
+
+  /* Forms */
+  input, textarea, select {
+    background-color: #444;
+    color: #fff;
+  }
+
+  /* Buttons */
+  button, .btn {
+    background-color: #444;
+    color: #fff;
+  }
+  button:hover, .btn:hover {
+    background-color: #555;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444;
+  }
+
+  /* Images */
+  img {
+    border: 1px solid #444;
+  }
+  div {
+    background-color: #333;
+    /* color: #fff; */
+    /* padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  }
+  nav {
+    background-color: #333;
+    /* color: #fff; */
+    /* padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  }
+
+}
+
+
+/* Light Mode */
+.light-mode {
+  /* Text */
+  h1, h2, h3, h4, h5, h6, p, a, span, li {
+    color: #333;
+  }
+
+  /* Background */
+  body, html {
+    background-color: #fff;
+  }
+
+  /* Borders */
+  table, th, td, input, textarea, select, button {
+    border-color: #ccc;
+  }
+
+  /* Links */
+  a:hover {
+    color: #666;
+  }
+
+  /* Headers and Footers */
+  header, footer {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  /* Navigation */
+  nav ul li a {
+    color: #333;
+  }
+  nav ul li a:hover {
+    color: #666;
+  }
+
+  /* Forms */
+  input, textarea, select {
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Buttons */
+  button, .btn {
+    background-color: #fff;
+    color: #333;
+  }
+  button:hover, .btn:hover {
+    background-color: #ccc;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ccc;
+  }
+
+  /* Images */
+  img {
+    border: 1px solid #ccc;
+  }
+   /* Div */
+   div {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="./Registration.css" />
-    <script src="./product.js"></script>
-  </head>
-  <body>
-    <form action="">
-      <h2>Registration Page</h2>
-      <input type="text" placeholder="Enter Name" id="name" required/>
-      <input type="text" placeholder="Enter Email" id="email" required />
-      <input type="text" placeholder="Enter Image Url" id="img" required />
-      <input type="text" placeholder="Enter Mobile Number" id="mobile" required />
-      <input type="text" placeholder="Enter GitHub Profile URL" id="github">
-      <input type="text" placeholder="Enter LinkedIn Profile URL" id="linkedin">
-      <input type="text" placeholder="Enter Twitter Profile URL" id="twitter">
-      <input type="text" placeholder="Enter Facebook Profile URL" id="facebook">
-      <input type="password" placeholder="Enter Password" id="password" required/>
-      <input type="text" placeholder="Enter Confirm Password" id="cpassword" required/>
-      <button type="submit" class="register" onclick="registration()">
-        Register
-      </button>
-      <button type="submit" class="login" onclick="loginredirect()">
-        Login
-      </button>
-    </form>
 
-    <script src="./Registration.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="./Registration.css" />
+  <link rel="stylesheet" href="./root.css">
+  <script src="./root.js"></script>
+  <script src="./product.js"></script>
+</head>
+
+<body onload="h()">
+  <div>
+    <button onclick="dark()">dark</button>
+    <button onclick="light()">light</button>
+  </div>
+  <form action="">
+    <h2>Registration Page</h2>
+    <input type="text" placeholder="Enter Name" id="name" required />
+    <input type="text" placeholder="Enter Email" id="email" required />
+    <input type="text" placeholder="Enter Image Url" id="img" required />
+    <input type="text" placeholder="Enter Mobile Number" id="mobile" required />
+    <input type="text" placeholder="Enter GitHub Profile URL" id="github">
+    <input type="text" placeholder="Enter LinkedIn Profile URL" id="linkedin">
+    <input type="text" placeholder="Enter Twitter Profile URL" id="twitter">
+    <input type="text" placeholder="Enter Facebook Profile URL" id="facebook">
+    <input type="password" placeholder="Enter Password" id="password" required />
+    <input type="text" placeholder="Enter Confirm Password" id="cpassword" required />
+    <button type="submit" class="register" onclick="registration()">
+      Register
+    </button>
+    <button type="submit" class="login" onclick="loginredirect()">
+      Login
+    </button>
+  </form>
+
+  <script src="./Registration.js"></script>
+</body>
+
 </html>

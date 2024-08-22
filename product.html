@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Registration Form</title>
-    <link rel="stylesheet" href="./product.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <form id="product_form">
-      <h2>Product Registration Form</h2>
-      <input type="text" placeholder="Product Name" id="pname" /> <br />
-      <input type="text" placeholder="Price" id="pprice" /><br />
-      <input type="text" placeholder="Image" id="pimage" /><br />
-      <input type="text" placeholder="Brand" id="pbrand" /><br />
-      <input type="text" placeholder="Review" id="preview" /><br />
-      <input type="text" placeholder="Rating" id="prating" /><br />
-      <button type="button" id="addbutton" onclick="return run()">
-        Submit
-      </button>
-      <button type="button" onclick="updateproduct()" id="updatebutton">
-        Update Product
-      </button>
-      <button type="button" id="close" onclick="Close()">Close</button>
-    </form>
-    <!-- ===================================== -->
-    <section id="website">
-      <button onclick="show_form()">+ Add Product</button>
 
-      <table
-        width="80%"
-        border="2px"
-        align="center"
-        cellpadding="10px"
-        cellspacing="10px"
-        id="showproductdata"
-      ></table>
-    </section>
-    <script src="./product.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Registration Form</title>
+  <link rel="stylesheet" href="./product.css" />
+  <link rel="stylesheet" href="./root.css">
+  <script src="./root.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="h()">
+  <div>
+    <button onclick="dark()">dark</button>
+    <button onclick="light()">light</button>
+  </div>
+  <form id="product_form">
+    <h2>Product Registration Form</h2>
+    <input type="text" placeholder="Product Name" id="pname" /> <br />
+    <input type="text" placeholder="Price" id="pprice" /><br />
+    <input type="text" placeholder="Image" id="pimage" /><br />
+    <input type="text" placeholder="Brand" id="pbrand" /><br />
+    <input type="text" placeholder="Review" id="preview" /><br />
+    <input type="text" placeholder="Rating" id="prating" /><br />
+    <button type="button" id="addbutton" onclick="return run()">
+      Submit
+    </button>
+    <button type="button" onclick="updateproduct()" id="updatebutton">
+      Update Product
+    </button>
+    <button type="button" id="close" onclick="Close()">Close</button>
+  </form>
+  <!-- ===================================== -->
+  <section id="website">
+    <button onclick="show_form()">+ Add Product</button>
+
+    <table width="80%" border="2px" align="center" cellpadding="10px" cellspacing="10px" id="showproductdata"></table>
+  </section>
+  <script src="./product.js"></script>
+</body>
+
 </html>

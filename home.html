@@ -13,8 +13,6 @@
 
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="./product.css" />
-    <link rel="stylesheet" href="./root.css">
-    <script src="./root.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -24,7 +22,7 @@
     />
   </head>
 
-  <body onload="h()">
+  <body>
     <form id="product_form">
       <h2>Product Registration Form</h2>
       <input type="text" placeholder="Product Name" id="pname" /> <br />
@@ -64,11 +62,7 @@
             />
           </div>
         </div>
-        <div>
-          <button onclick="dark()">dark</button>
-          <button onclick="light()">light</button>
-        </div>
-
+        
         <div class="message" onclick="profileopen()">
           <div class="circle"></div>
           <img
@@ -194,8 +188,8 @@
 
             <div class="box box3">
               <div class="text">
-                <h2 class="topic-heading">320</h2>
-                <h2 class="topic">Comments</h2>
+                <h2 class="topic-heading" id="totalprice">320</h2>
+                <h2 class="topic">Amount of Products</h2>
               </div>
 
               <img
@@ -206,7 +200,7 @@
 
             <div class="box box4">
               <div class="text">
-                <h2 class="topic-heading">70</h2>
+                <h2 class="topic-heading" id="totalproduct"></h2>
                 <h2 class="topic">Published</h2>
               </div>
 

@@ -65,10 +65,8 @@ const Close = () => {
   let response = await data.json();
 
   console.log(response);
-  document.querySelector("#showproductdata").innerHTML = response
-    .map(
-      (e) => `
-         <tr>
+  document.querySelector("#showproductdata").innerHTML = response.map((e) =>
+    `    <tr>
          <td>${e.product_name}</td>
          <td>${e.product_price}</td>
          <td><img width="70px" src="${e.product_image}"></td>
@@ -77,10 +75,8 @@ const Close = () => {
          <td>${e.product_rating}</td>
          <td onclick="del('${e.id}')"><i class="fa-solid fa-trash"></i></td>
          <td onclick="upd('${e.id}')"> <i class="fa-solid fa-pen"></i></td>
-         </tr>
-         `
-    )
-    .join(" ");
+         </tr>`
+  ).join(" ");
 })();
 
 function del(arg) {

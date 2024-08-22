@@ -1,195 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, 
-                   initial-scale=1.0"
-    />
-    <title>Admin Dashboard</title>
-    <script src="./product.js"></script>
 
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="./product.css" />
-    <link rel="stylesheet" href="./profile.css">
-    <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, 
+                   initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <script src="./product.js"></script>
+  <link rel="stylesheet" href="./root.css">
+  <script src="./root.js"></script>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="./product.css" />
+  <link rel="stylesheet" href="./profile.css">
+  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-  <body>
-    <form id="product_form">
-      <h2>Product Registration Form</h2>
-      <input type="text" placeholder="Product Name" id="pname" /> <br />
-      <input type="text" placeholder="Price" id="pprice" /><br />
-      <input type="text" placeholder="Image" id="pimage" /><br />
-      <input type="text" placeholder="Brand" id="pbrand" /><br />
-      <input type="text" placeholder="Review" id="preview" /><br />
-      <input type="text" placeholder="Rating" id="prating" /><br />
-      <button type="button" id="addbutton" onclick="return run()">
-        Submit
-      </button>
-      <button type="button" onclick="updateproduct()" id="updatebutton">
-        Update Product
-      </button>
-      <button type="button" id="close" onclick="Close()">Close</button>
-    </form>
-    <section id="website">
-      <!-- for header part -->
-      <header>
-        <div class="logosec">
-          <div class="logo" onclick="home()">Login Dashboard</div>
-          <img
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
-            class="icn menuicn"
-            id="menuicn"
-            alt="menu-icon"
-          />
-        </div>
+<body onload="h()">
+  <form id="product_form">
+    <h2>Product Registration Form</h2>
+    <input type="text" placeholder="Product Name" id="pname" /> <br />
+    <input type="text" placeholder="Price" id="pprice" /><br />
+    <input type="text" placeholder="Image" id="pimage" /><br />
+    <input type="text" placeholder="Brand" id="pbrand" /><br />
+    <input type="text" placeholder="Review" id="preview" /><br />
+    <input type="text" placeholder="Rating" id="prating" /><br />
+    <button type="button" id="addbutton" onclick="return run()">
+      Submit
+    </button>
+    <button type="button" onclick="updateproduct()" id="updatebutton">
+      Update Product
+    </button>
+    <button type="button" id="close" onclick="Close()">Close</button>
+  </form>
+  <section id="website">
+    <!-- for header part -->
+    <header>
+      <div class="logosec">
+        <div class="logo" onclick="home()">Login Dashboard</div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+          class="icn menuicn" id="menuicn" alt="menu-icon" />
+      </div>
 
-        <div class="searchbar">
-          <input type="text" placeholder="Search" />
-          <div class="searchbtn">
-            <img
-              src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-              class="icn srchicn"
-              alt="search-icon"
-            />
-          </div>
-        </div>
-
-        <div class="message" onclick="profileopen()">
-          <div class="circle"></div>
-          <img
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
-            class="icn"
-            alt=""
-          />
-          <div class="dp">
-            <img
-              src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-              class="dpicn"
-              alt="dp"
-            />
-          </div>
-        </div>
-      </header>
-
-      <div class="main-container">
-        <div class="navcontainer">
-          <nav class="nav">
-            <div class="nav-upper-options">
-              <div class="nav-option option1" onclick="home()">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-                  class="nav-img"
-                  alt="dashboard"
-                />
-                <h3>Dashboard</h3>
-              </div>
-
-              <div class="option2 nav-option">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
-                  class="nav-img"
-                  alt="articles"
-                />
-                <h3>Articles</h3>
-              </div>
-
-              <div class="nav-option option3" onclick="report()">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
-                  class="nav-img"
-                  alt="report"
-                />
-                <h3>Report</h3>
-              </div>
-
-              <div class="nav-option option4">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
-                  class="nav-img"
-                  alt="institution"
-                />
-                <h3>Institution</h3>
-              </div>
-
-              <div class="nav-option option5">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-                  class="nav-img"
-                  alt="blog"
-                />
-                <h3>Profile</h3>
-              </div>
-
-              <div class="nav-option option6">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
-                  class="nav-img"
-                  alt="settings"
-                />
-                <h3>Settings</h3>
-              </div>
-
-              <div class="nav-option logout">
-                <img
-                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
-                  class="nav-img"
-                  alt="logout"
-                />
-                <h3 onclick="loginredirect()">Logout</h3>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <div class="main">
-          <div class="searchbar2">
-            <input type="text" name="" id="" placeholder="Search" />
-            <div class="searchbtn">
-              <img
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-                class="icn srchicn"
-                alt="search-button"
-              />
-            </div>
-          </div>
-
-          
-          <!-- PROFILE CODE START-->
-         
-
-          <div class="card">
-            <img src="" id="profile-photo" alt="John" style="width:100%">
-            <h1 id="name"></h1>
-            <p  id="email"></p>
-            <a href="" id="github"><i class="fa fa-github"></i></a>
-            <a href="" id="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="" id="linkedin"><i class="fa fa-linkedin"></i></a>
-            <a href="" id="facebook"><i class="fa fa-facebook"></i></a>
-            <p><button id="mobile"></button></p>
-          </div>
-
-          <!-- PROFILE CODE END -->
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <div class="searchbtn">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+            class="icn srchicn" alt="search-icon" />
         </div>
       </div>
-    </section>
-    
-    <script src="./profile.js"></script>
 
-    <script src="./home.js"></script>
-    <script>
-      let logininfo = window.localStorage.getItem("logininfo");
-      let loginingfo1 = JSON.parse(logininfo);
-      let select = document.querySelector(".dpicn");
-      select.src = loginingfo1.img;
-    </script>
-  </body>
+      <div>
+        <button onclick="dark()">dark</button>
+        <button onclick="light()">light</button>
+      </div>
+
+      <div class="message" onclick="profileopen()">
+        <div class="circle"></div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="" />
+        <div class="dp">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+            class="dpicn" alt="dp" />
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <div class="nav-option option1" onclick="home()">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                class="nav-img" alt="dashboard" />
+              <h3>Dashboard</h3>
+            </div>
+
+            <div class="option2 nav-option">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img"
+                alt="articles" />
+              <h3>Articles</h3>
+            </div>
+
+            <div class="nav-option option3" onclick="report()">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img"
+                alt="report" />
+              <h3>Report</h3>
+            </div>
+
+            <div class="nav-option option4">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img"
+                alt="institution" />
+              <h3>Institution</h3>
+            </div>
+
+            <div class="nav-option option5">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img"
+                alt="blog" />
+              <h3>Profile</h3>
+            </div>
+
+            <div class="nav-option option6">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img"
+                alt="settings" />
+              <h3>Settings</h3>
+            </div>
+
+            <div class="nav-option logout">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img"
+                alt="logout" />
+              <h3 onclick="loginredirect()">Logout</h3>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="searchbar2">
+          <input type="text" name="" id="" placeholder="Search" />
+          <div class="searchbtn">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+              class="icn srchicn" alt="search-button" />
+          </div>
+        </div>
+
+
+        <!-- PROFILE CODE START-->
+
+
+        <div class="card">
+          <img src="" id="profile-photo" alt="John" style="width:100%">
+          <h1 id="name"></h1>
+          <p id="email"></p>
+          <a href="" id="github"><i class="fa fa-github"></i></a>
+          <a href="" id="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="" id="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="" id="facebook"><i class="fa fa-facebook"></i></a>
+          <p><button id="mobile"></button></p>
+        </div>
+
+        <!-- PROFILE CODE END -->
+      </div>
+    </div>
+  </section>
+
+  <script src="./profile.js"></script>
+
+  <script src="./home.js"></script>
+  <script>
+    let logininfo = window.localStorage.getItem("logininfo");
+    let loginingfo1 = JSON.parse(logininfo);
+    let select = document.querySelector(".dpicn");
+    select.src = loginingfo1.img;
+  </script>
+</body>
+
 </html>
