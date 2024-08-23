@@ -8,8 +8,6 @@
                    initial-scale=1.0" />
   <title>Admin Dashboard</title>
   <script src="./product.js"></script>
-  <link rel="stylesheet" href="./root.css">
-  <script src="./root.js"></script>
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="./product.css" />
   <link rel="stylesheet" href="./profile.css">
@@ -20,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="h()">
+<body >
   <form id="product_form">
     <h2>Product Registration Form</h2>
     <input type="text" placeholder="Product Name" id="pname" /> <br />
@@ -54,15 +52,11 @@
         </div>
       </div>
 
-      <div>
-        <button onclick="dark()">dark</button>
-        <button onclick="light()">light</button>
-      </div>
 
-      <div class="message" onclick="profileopen()">
+      <div class="message" >
         <div class="circle"></div>
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="" />
-        <div class="dp">
+        <div class="dp" onclick="profileopen()">
           <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
             class="dpicn" alt="dp" />
         </div>

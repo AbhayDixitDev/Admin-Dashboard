@@ -5,17 +5,17 @@ menuicn.addEventListener("click", () => {
   nav.classList.toggle("navclose");
 });
 
-function home() {
+function home() {   //home redirect
   document.location.href = "home.html";
 }
-function report() {
+function report() { //report page redirect
   document.location.href = "report.html";
 }
-function profileopen() {
+function profileopen() {  //profile page redirect
   document.location.href = "profile.html";
 }
 
-
+//total prodcut show 
 (async function(){
   let data = await fetch('http://localhost:4000/Product');
   let res = await data.json();
@@ -30,7 +30,7 @@ function profileopen() {
   }, 200);
 })();
 
-
+//total amount of products
 (async () => {
   try {
     const response = await fetch('http://localhost:4000/Product');
