@@ -51,3 +51,7 @@ function profileopen() {  //profile page redirect
     console.error('Error:', error);
   }
 })();
+
+function products(){
+  document.location.href = "products.html";
+}

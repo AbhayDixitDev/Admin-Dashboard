@@ -4,24 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, 
-                   initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, Initial-scale=1.0" />
   <title>Admin Dashboard</title>
   <script src="./product.js"></script>
 
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="./product.css" />
-  <link rel="stylesheet" href="./report.css" />
-  <link rel="stylesheet" href="./root.css">
-  <script src="./root.js"></script>
-  <script src="./home.js"></script>
-  <script src="./profile.js"></script>
+  <link rel="stylesheet" href="./products.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body >
+<body>
+  <!-- Form for add data and update data start -->
   <form id="product_form">
     <h2>Product Registration Form</h2>
     <input type="text" placeholder="Product Name" id="pname" /> <br />
@@ -38,11 +35,15 @@
     </button>
     <button type="button" id="close" onclick="Close()">Close</button>
   </form>
+  <!-- Form for add data and update data end -->
+
+  <!-- Home page start -->
+
   <section id="website">
-    <!-- for header part -->
+    <!-- for header part start -->
     <header>
       <div class="logosec">
-        <div class="logo" onclick="home()">Login Dashboard</div>
+        <div class="logo">Login Dashboard</div>
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
           class="icn menuicn" id="menuicn" alt="menu-icon" />
       </div>
@@ -54,7 +55,7 @@
             class="icn srchicn" alt="search-icon" />
         </div>
       </div>
-
+      <!-- profile circle start -->
       <div class="message" >
         <div class="circle"></div>
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="" />
@@ -63,13 +64,17 @@
             class="dpicn" alt="dp" />
         </div>
       </div>
+      <!-- profile circle end -->
+
     </header>
+    <!-- for header part end -->
 
     <div class="main-container">
+      <!-- Left side nav bar options start -->
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
-            <div class="nav-option option1" onclick="home()">
+            <div class="nav-option option1">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
                 class="nav-img" alt="dashboard" />
               <h3>Dashboard</h3>
@@ -81,7 +86,7 @@
               <h3>Articles</h3>
             </div>
 
-            <div class="nav-option option3">
+            <div class="nav-option option3" onclick="report()">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img"
                 alt="report" />
               <h3>Report</h3>
@@ -113,39 +118,37 @@
           </div>
         </nav>
       </div>
+      <!-- Left side nav bar options end -->
+      
+      <!-- Right side body start -->
+      
       <div class="main">
-        <div class="searchbar2">
+        <!--search bar top start  -->
+        <!-- <div class="searchbar2">
           <input type="text" name="" id="" placeholder="Search" />
           <div class="searchbtn">
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
               class="icn srchicn" alt="search-button" />
           </div>
-        </div>
+        </div> -->
+        <!--search bar top end  -->
 
+        <div class="container1">
+           
+          </div>
         
 
-        <div class="report-container" style="margin-top: 0px;">
-          <div class="report-header">
-            <h1 class="recent-Articles">Recent Products</h1>
-            <button class="view" onclick="show_form()">Add</button>
-          </div>
-          <div class="item1" style="margin-left: 20px">
-            <h3 class="t-op-nextlvl1">Product Name</h3>
-            <h3 class="t-op-nextlvl">Product Price</h3>
-            <h3 class="t-op-nextlvl">Product Image</h3>
-            <h3 class="t-op-nextlvl">Product Brand</h3>
-            <h3 class="t-op-nextlvl">Product Review</h3>
-            <h3 class="t-op-nextlvl">Product Rating</h3>
-            <h3 class="t-op-nextlvl">Delete Product</h3>
-            <h3 class="t-op-nextlvl">Update Product</h3>
-          </div>
-          <div class="report-body"></div>
-        </div>
+
       </div>
+      <!-- Right side body end -->
+
     </div>
   </section>
+  <!-- Home page end -->
 
-  <script src="./report.js"></script>
+
+  <script src="./home.js"></script>
+  <script src="./products.js"></script>
   <script>
     let logininfo = window.localStorage.getItem("logininfo");
     let loginingfo1 = JSON.parse(logininfo);

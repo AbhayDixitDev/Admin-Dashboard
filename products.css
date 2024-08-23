@@ -1,0 +1,41 @@
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .box1 {
+    position: relative; /* add relative positioning */
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* add cursor pointer on hover */
+  }
+
+  .box1 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .product-details {
+    position: absolute; /* add absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 84, 155, 0.705); /* add background color with opacity */
+    color: #fff; /* change text color to white */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none; /* hide product details by default */
+    font-size: 24px;
+  }
+
+  .box1:hover .product-details {
+    display: block; /* show product details on hover */
+  }
