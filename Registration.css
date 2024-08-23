@@ -2,6 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f7f7; /* Light Gray */
+  background-image: url(https://assets.altrarunning.com/altrarunning-nora/image/upload/dpr_auto,f_auto,q_auto/24F_Graphics_ShoeFinder_4x3?_i=AH);
 }
 
 /* Form Styles */
@@ -13,15 +14,17 @@ form {
   border: 1px solid #ddd; /* Light Gray */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+
 }
 
 /* Input Field Styles */
 input[type="text"],
 input[type="password"] {
   width: calc(100% - 20px); /* Adjust the width to account for padding */
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
+  height: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
   border: 1px solid #ccc; /* Light Gray */
   border-radius: 5px;
 }
@@ -31,6 +34,7 @@ input[type="text"]:focus,
 input[type="password"]:focus {
   border-color: #aaa; /* Dark Gray */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 /* Button Styles */

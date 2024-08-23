@@ -1,7 +1,51 @@
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7; /* Light Gray */
+  background-color: #000000; /* Light Gray */
+  background-image: url(https://i.pinimg.com/originals/56/e1/e7/56e1e73dcd8b78a63bdae2915c012e3e.gif);
+  background-size:590px;
+  background-repeat: no-repeat;
+  background-color: #f00; /* initial color */
+  animation: changeColor 20s infinite; /* animation name, duration, and iteration count */
+  mix-blend-mode:hard-light;
+}
+
+
+
+@keyframes changeColor {
+  0% {
+    background-color: #f00; /* initial color */
+  }
+  10% {
+    background-color: #660000; /* dark red */
+  }
+  20% {
+    background-color: #330000; /* dark brown */
+  }
+  30% {
+    background-color: #003300; /* dark green */
+  }
+  40% {
+    background-color: #000066; /* dark blue */
+  }
+  50% {
+    background-color: #330033; /* dark purple */
+  }
+  60% {
+    background-color: #663300; /* dark orange */
+  }
+  70% {
+    background-color: #333300; /* dark yellow */
+  }
+  80% {
+    background-color: #000033; /* dark teal */
+  }
+  90% {
+    background-color: #660033; /* dark magenta */
+  }
+  100% {
+    background-color: #f00; /* back to initial color */
+  }
 }
 
 /* Form Styles */
@@ -13,6 +57,9 @@ form {
   border: 1px solid #ddd; /* Light Gray */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right;
+  margin-top: 10%;
+  margin-right: 20%;
 }
 
 /* Input Field Styles */
