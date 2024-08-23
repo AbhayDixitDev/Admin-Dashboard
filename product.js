@@ -124,10 +124,10 @@ const Close = () => {
   });
 
   // Join the array of table rows into a single string
-  let productTableHtml = productRows.join(" ");
+  let productTableHtml = await productRows.join(" ");
 
   // Set the innerHTML of the showProductDataElement to the product table HTML
-  showProductDataElement.innerHTML = productTableHtml;
+  showProductDataElement.innerHTML = await productTableHtml;
 })();
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -241,5 +241,5 @@ const updateproduct = () => {
 
 // login page redirect function
 function loginredirect() {
-  document.location.href = "login.html";
+  document.location.href = "index.html";
 }

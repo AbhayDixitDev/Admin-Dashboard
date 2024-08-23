@@ -20,11 +20,12 @@ const login = async () => {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   if (finddata) {
+    document.location.href = "home.html";
+
     // If a matching user is found, store their info in local storage
     window.localStorage.setItem("logininfo", JSON.stringify(finddata));
     
     // Redirect the user to the home page
-    document.location.href = "home.html";
   } else {
     // If no matching user is found, prompt the user to retry or register
     var choice = confirm(
