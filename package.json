@@ -1,0 +1,19 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "scripts": {
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+    "json-server": "json-server --watch data.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "homepage": "https://abhaydixitdev.github.io/Admin-Dashboard/",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
+
+
+
