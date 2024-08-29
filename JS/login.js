@@ -76,5 +76,5 @@ function login() {
 }
 
 function redirectRegister() {
-  window.location.href = 'registration.html'; // Redirect to registration.html
+  window.location.href = 'Registration.html'; // Redirect to registration.html
 }
