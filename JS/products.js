@@ -1,6 +1,6 @@
 (async function () {
     // Define the URL for the API endpoint to fetch product data
-    let url = "https://jso-nis-live-again.vercel.app/Product";
+    let url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product";
   
     // Use the fetch API to send a GET request to the API endpoint
     let data = await fetch(url);

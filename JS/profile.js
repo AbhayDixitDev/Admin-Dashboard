@@ -1,7 +1,7 @@
 logininfo = JSON.parse(localStorage.getItem('logininfo'));
 const id = logininfo.id.toString();
 console.log(id);
-const url = `https://jso-nis-live-again.vercel.app/Registration/${id}`;
+const url = `https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Registration/${id}`;
 
 fetch(url)
   .then(response => response.json())
