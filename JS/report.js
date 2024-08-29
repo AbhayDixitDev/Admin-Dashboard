@@ -14,8 +14,8 @@ async function showProduct() {
             <h3 class="t-op-nextlvl">${e.product_brand}</h3>
             <h3 class="t-op-nextlvl">${e.product_review}</h3>
             <h3 class="t-op-nextlvl">${e.product_rating}</h3>
-            <h3 class="t-op-nextlvl btn-d" onclick="del('${e.id}')">Delete</h3>
-            <h3 class="t-op-nextlvl btn-e" onclick="upd('${e.id}')">Edit</h3>
+            <h3 class="t-op-nextlvl btn-d" onclick="del('${e.id}')"><i class="fa-solid fa-trash"></i>Delete</h3>
+            <h3 class="t-op-nextlvl btn-e" onclick="upd('${e.id}')"> <i class="fa-solid fa-pen"></i>Edit</h3>
           </div>           
         </div>
       `
