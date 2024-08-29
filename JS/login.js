@@ -5,7 +5,7 @@ function login() {
   const password = passwordInput.value.trim();
 
   if (email && password) {
-    fetch('https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Registration')
+    fetch('https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Registration')
       .then(response => response.json())
       .then(data => {
         const userData = data.find(user => user.email === email && user.password === password);

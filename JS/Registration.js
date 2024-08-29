@@ -36,7 +36,7 @@ const registration = async () => {
   };
 
   // Define the URL and method for the API request
-  let url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Registration";
+  let url = "https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Registration";
   let options = {
     method: "POST",
     headers: {

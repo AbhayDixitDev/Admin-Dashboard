@@ -1,6 +1,6 @@
 async function showProduct() {
   try {
-    const url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product";
+    const url = "https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Product";
     const response = await fetch(url);
     const data = await response.json();
 
@@ -51,7 +51,7 @@ const run = async () => {
   };
 
   // Define the URL and method for the API request
-  let url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product";
+  let url = "https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Product";
   let options = {
     method: "POST",
     headers: {
@@ -114,7 +114,7 @@ const show_form = () => {
 async function del(arg) {
   // Construct the URL for the API endpoint to delete a product
   // The ${arg} is replaced with the actual product ID passed as an argument
-  let url = `https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`;
+  let url = `https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`;
 
   // Define the request method as DELETE
   let method = {
@@ -148,7 +148,7 @@ async function upd(arg) {
   storeid = arg;
 
   // Fetch the product data from the API endpoint
-  let data = await fetch(`https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`);
+  let data = await fetch(`https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`);
   let response = await data.json();
   console.log(response);
 
@@ -196,7 +196,7 @@ const updateproduct = async () => {
   console.log(product);
 
   // Construct the URL for the API endpoint to update the product
-  let url = `https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${storeid}`;
+  let url = `https://jso-nis-live-again-6govfacc3-abhay-dixits-projects-4f073080.vercel.app/Product/${storeid}`;
 
   // Define the request method as PUT and set the request body to the updated product data
   let options = {
