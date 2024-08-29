@@ -1,8 +1,11 @@
 let menuicn = document.querySelector(".menuicn");
 let nav = document.querySelector(".navcontainer");
 
-menuicn.addEventListener("click", () => {
-  nav.classList.toggle("navclose");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuicn = document.getElementById("menuicn");
+  menuicn.addEventListener("click", () => {
+    nav.classList.toggle("navclose");
+  });
 });
 
 function home() {   //home redirect
@@ -17,7 +20,7 @@ function profileopen() {  //profile page redirect
 
 //total prodcut show 
 (async function(){
-  let data = await fetch('http://localhost:4000/Product');
+  let data = await fetch('https://jso-nis-live-again.vercel.app/Product');
   let res = await data.json();
   let counter = 0;
   const elem = document.querySelector('#totalproduct');
@@ -31,22 +34,25 @@ function profileopen() {  //profile page redirect
 })();
 
 //total amount of products
-(async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch('http://localhost:4000/Product');
+    const response = await fetch('https://jso-nis-live-again.vercel.app/Product');
     const data = await response.json();
-    const totalPrice = data.reduce((acc, current) => acc + parseInt(current.product_price), 0);
+    const totalPrice =  data.reduce((acc, current) => acc + parseInt(current.product_price), 0);
 
     const totalPriceElement = document.querySelector('#totalprice');
-    let counter = 0;
-
-    const intervalId = setInterval(() => {
-      counter=counter+100;
-      totalPriceElement.innerHTML = counter;
-      if (counter >= totalPrice) {
-        clearInterval(intervalId);
-      }
-    }, 1);
+    if (totalPriceElement) {
+      let counter = 0;
+      const intervalId = setInterval(() => {
+        counter = counter + 100;
+        totalPriceElement.innerHTML = counter;
+        if (counter >= totalPrice) {
+          clearInterval(intervalId);
+        }
+      }, 1);
+    } else {
+      console.log("Element not found!");
+    }
   } catch (error) {
     console.error('Error:', error);
   }
@@ -54,4 +60,9 @@ function profileopen() {  //profile page redirect
 
 function products(){
   document.location.href = "products.html";
+}
+
+
+function loginredirect() {
+  document.location.href = "index.html";
 }

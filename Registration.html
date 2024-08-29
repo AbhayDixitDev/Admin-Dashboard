@@ -5,15 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registration Page</title>
-  <link rel="stylesheet" href="./Registration.css" />
-  <link rel="stylesheet" href="./root.css">
-  <script src="./root.js"></script>
-  <script src="./product.js"></script>
+  <link rel="stylesheet" href="./Styles/Registration.css" />
 </head>
 
 <body >
   
-  <form action="">
+  <form>
     <h2>Registration Page</h2>
     <input type="text" placeholder="Enter Name" id="name" required />
     <input type="text" placeholder="Enter Email" id="email" required />
@@ -25,15 +22,15 @@
     <input type="text" placeholder="Enter Facebook Profile URL" id="facebook">
     <input type="password" placeholder="Enter Password" id="password" required />
     <input type="text" placeholder="Enter Confirm Password" id="cpassword" required />
-    <button type="submit" class="register" onclick="registration()">
+    <button type="button" class="register" onclick="registration()">
       Register
     </button>
-    <button type="submit" class="login" onclick="loginredirect()">
+    <button type="button" class="login" onclick="loginredirect()">
       Login
     </button>
   </form>
-
-  <script src="./Registration.js"></script>
+  
+  <script src="./JS/Registration.js"></script>
 </body>
 
 </html>

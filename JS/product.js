@@ -18,21 +18,26 @@ const run = () => {
   };
 
   // Define the URL and method for the API request
-  let url = "http://localhost:4000/Product";
-  let method = {
-    method: "POST", // Send a POST request to create a new product
-    header: {
-      "content-type": "application/json", // Specify the request body format as JSON
+  let url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product";
+  let options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(product_data), // Convert the product data to a JSON string
+    body: JSON.stringify(product_data),
   };
 
-  // Send the request to the API using the fetch API
-  fetch(url, method);
+  fetch(url, options);
 
   // Get the element with the id "website" and remove any filter effects
   let selectbg = document.querySelector("#website");
   selectbg.style.filter = "none";
+
+  
+  let form = document.querySelector("#product_form");
+  form.style.display = "none";
+  window.location.href="report.html";
+  
 
   // Prevent the default form submission behavior
   return false;
@@ -92,7 +97,7 @@ const Close = () => {
 // Immediately Invoked Function Expression (IIFE) to fetch and display product data
 (async function () {
   // Define the URL for the API endpoint to fetch product data
-  let url = "http://localhost:4000/Product";
+  let url = "https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product";
 
   // Use the fetch API to send a GET request to the API endpoint
   let data = await fetch(url);
@@ -107,18 +112,18 @@ const Close = () => {
   let showProductDataElement = document.querySelector("#showproductdata");
 
   // Use the map() method to create an array of HTML table rows for each product
-  let productRows = response.map((product) => {
+  let productRows = response.map((Product) => {
     // Create a table row for each product with the product details
     return `
       <tr>
-        <td>${product.product_name}</td>
-        <td>${product.product_price}</td>
-        <td><img width="70px" src="${product.product_image}"></td>
-        <td>${product.product_brand}</td>
-        <td>${product.product_review}</td>
-        <td>${product.product_rating}</td>
-        <td onclick="del('${product.id}')"><i class="fa-solid fa-trash"></i></td>
-        <td onclick="upd('${product.id}')"> <i class="fa-solid fa-pen"></i></td>
+        <td>${Product.product_name}</td>
+        <td>${Product.product_price}</td>
+        <td><img width="70px" src="${Product.product_image}"></td>
+        <td>${Product.product_brand}</td>
+        <td>${Product.product_review}</td>
+        <td>${Product.product_rating}</td>
+        <td onclick="del('${Product.id}')"><i class="fa-solid fa-trash"></i></td>
+        <td onclick="upd('${Product.id}')"> <i class="fa-solid fa-pen"></i></td>
       </tr>
     `;
   });
@@ -136,7 +141,7 @@ const Close = () => {
 function del(arg) {
   // Construct the URL for the API endpoint to delete a product
   // The ${arg} is replaced with the actual product ID passed as an argument
-  let url = `http://localhost:4000/Product/${arg}`;
+  let url = `https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`;
 
   // Define the request method as DELETE
   let method = {
@@ -163,7 +168,7 @@ async function upd(arg) {
   storeid = arg;
 
   // Fetch the product data from the API endpoint
-  let data = await fetch(`http://localhost:4000/Product/${arg}`);
+  let data = await fetch(`https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${arg}`);
   let response = await data.json();
   console.log(response);
 
@@ -211,19 +216,22 @@ const updateproduct = () => {
   console.log(product);
 
   // Construct the URL for the API endpoint to update the product
-  let url = `http://localhost:4000/Product/${storeid}`;
+  let url = `https://jso-nis-live-again-git-main-abhay-dixits-projects-4f073080.vercel.app/Product/${storeid}`;
 
   // Define the request method as PUT and set the request body to the updated product data
-  let method = {
+  let options = {
     method: "PUT",
-    header: {
-      "content-type": "application/json",
+    headers: {
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(product),
   };
 
   // Send the update request to the API endpoint
-  fetch(url, method);
+  fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 
   // Remove the blur effect from the website background
   let selectbg = document.querySelector("#website");

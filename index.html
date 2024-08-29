@@ -5,21 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Page</title>
-  <link rel="stylesheet" href="./login.css" />
+  <link rel="stylesheet" href="./Styles/login.css" />
 </head>
 
 <body >
  
   <form>
-    <input type="text" placeholder="Enter Email" id="email" />
-    <input type="password" placeholder="Enter password" id="password" />
-    <button type="submit" class="login" onclick="login()">Login</button>
+    <input type="text" placeholder="Enter Email" id="email" autocomplete="email"/>
+    <input type="password" placeholder="Enter password" id="password" autocomplete="current-password"/>
+    <button type="submit" class="login" onclick="return login()">Login</button>
     <button type="button" class="register" onclick="redirectRegister()">
       Register
     </button>
   </form>
 
-  <script src="./login.js"></script>
+  <script src="./JS/login.js"></script>
 </body>
 
 </html>

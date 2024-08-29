@@ -38,7 +38,7 @@ input[type="password"]:focus {
 }
 
 /* Button Styles */
-button[type="submit"] {
+button[type="button"] {
   width: 100%;
   height: 40px;
   margin-bottom: 10px; /* Add margin between buttons */
@@ -50,30 +50,30 @@ button[type="submit"] {
 }
 
 /* Button Hover Styles */
-button[type="submit"]:hover {
+button[type="button"]:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Register Button Styles */
-button[type="submit"].register {
+button[type="button"].register {
   background-color: #2ecc40; /* Green */
   color: #fff; /* White */
 }
 
 /* Register Button Hover Styles */
-button[type="submit"].register:hover {
+button[type="button"].register:hover {
   animation: color-grid 3s infinite;
   background-color: #1e8651; /* Dark Green */
 }
 
 /* Login Button Styles */
-button[type="submit"].login {
+button[type="button"].login {
   background-color: #ff3737; /* Red */
   color: #fff; /* White */
 }
 
 /* Login Button Hover Styles */
-button[type="submit"].login:hover {
+button[type="button"].login:hover {
   animation: color-grid-red 3s infinite;
   background-color: #c0392b; /* Dark Red */
 }
