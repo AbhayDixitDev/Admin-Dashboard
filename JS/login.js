@@ -1,4 +1,5 @@
 function login() {
+
   const emailInput = document.getElementById('email');
   const passwordInput = document.getElementById('password');
   const email = emailInput.value.trim();
